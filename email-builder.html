@@ -32,6 +32,7 @@
         .esg-source { background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%); }
         .email-content { font-family: Arial, Helvetica, sans-serif !important; line-height: 1.6; }
         .email-content * { font-family: Arial, Helvetica, sans-serif !important; }
+        .bespoke-card { background: linear-gradient(135deg, #fef3f2 0%, #fff7ed 100%); }
     </style>
 </head>
 <body class="bg-gray-50 min-h-screen font-arial">
@@ -62,6 +63,78 @@
     </div>
 
     <div class="max-w-6xl mx-auto p-4 md:p-8 space-y-6 font-arial">
+        <!-- BESPOKE MESSAGING CONFIGURATION -->
+        <div class="bespoke-card rounded-2xl shadow-xl p-6 border border-red-200">
+            <div class="flex items-center justify-between mb-4">
+                <h2 class="text-xl font-semibold text-gray-800 flex items-center gap-2 font-arial">
+                    <svg class="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"></path>
+                    </svg>
+                    Bespoke Messaging Configuration
+                </h2>
+                <span class="text-sm text-red-600 bg-red-50 px-3 py-1 rounded-full font-arial font-medium">Optional - Enhances AI Generation</span>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <!-- Area 1: E.ON Value Proposition Highlights -->
+                <div class="bg-white rounded-xl p-5 border border-red-100 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <svg class="w-5 h-5 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                        <h3 class="font-semibold text-gray-800 font-arial">Specific E.ON Propositions to Highlight</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3 font-arial">Enter specific E.ON services, solutions, or value propositions you want emphasised in the emails. If left blank, the AI will select appropriate messaging based on research.</p>
+                    <textarea id="bespokeEON" placeholder="e.g., 
+- Our new battery storage solutions for peak shaving
+- E.ON's recent £500m investment in grid infrastructure
+- Specific case study: helped similar manufacturer reduce costs by 35%
+- Focus on our Energy Performance Contracting (EnPC) guarantee
+- Mention our 24/7 energy monitoring dashboard" rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-red-500 font-arial text-sm resize-y"></textarea>
+                    <div class="mt-2 flex items-center gap-2 text-xs text-gray-500 font-arial">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Leave empty to use AI-selected E.ON value propositions</span>
+                    </div>
+                </div>
+
+                <!-- Area 2: Recipient/Business Specific Intel -->
+                <div class="bg-white rounded-xl p-5 border border-orange-100 shadow-sm">
+                    <div class="flex items-center gap-2 mb-3">
+                        <svg class="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                        </svg>
+                        <h3 class="font-semibold text-gray-800 font-arial">Recipient/Business Specific Intelligence</h3>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-3 font-arial">Add specific intelligence about the recipient or their business that you've gathered separately. This will be woven into the email alongside AI-researched information.</p>
+                    <textarea id="bespokeIntel" placeholder="e.g.,
+- Recently met John at the Energy Management Exhibition
+- Company is facing rising energy costs due to expansion
+- Specific pain point: current supplier doesn't offer flexibility services
+- They have a new sustainability director pushing for quick wins
+- Competitor recently let them down on a battery storage project
+- Specific site locations or upcoming projects you know about" rows="6" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-orange-500 font-arial text-sm resize-y"></textarea>
+                    <div class="mt-2 flex items-center gap-2 text-xs text-gray-500 font-arial">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <span>Leave empty to rely solely on AI research</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Quick Apply Buttons -->
+            <div class="mt-4 flex flex-wrap gap-2">
+                <button onclick="applyEONTemplate('battery')" class="text-xs bg-red-100 hover:bg-red-200 text-red-800 px-3 py-1.5 rounded-full transition-colors font-arial">Battery Storage</button>
+                <button onclick="applyEONTemplate('solar')" class="text-xs bg-orange-100 hover:bg-orange-200 text-orange-800 px-3 py-1.5 rounded-full transition-colors font-arial">Solar PV</button>
+                <button onclick="applyEONTemplate('efficiency')" class="text-xs bg-yellow-100 hover:bg-yellow-200 text-yellow-800 px-3 py-1.5 rounded-full transition-colors font-arial">Energy Efficiency</button>
+                <button onclick="applyEONTemplate('heat')" class="text-xs bg-green-100 hover:bg-green-200 text-green-800 px-3 py-1.5 rounded-full transition-colors font-arial">Heat Networks</button>
+                <button onclick="applyEONTemplate('ppa')" class="text-xs bg-blue-100 hover:bg-blue-200 text-blue-800 px-3 py-1.5 rounded-full transition-colors font-arial">Corporate PPA</button>
+                <button onclick="clearBespoke()" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-600 px-3 py-1.5 rounded-full transition-colors font-arial ml-auto">Clear All</button>
+            </div>
+        </div>
+
         <!-- Signature Configuration -->
         <div class="glass-effect rounded-2xl shadow-xl p-6 border border-white/50">
             <div class="flex items-center justify-between mb-4">
@@ -252,6 +325,51 @@
         let researchResults = new Map();
         let signatureImageData = null;
 
+        // Template presets for quick apply
+        const eonTemplates = {
+            battery: `Key focus: E.ON's battery storage solutions
+- Grid-scale battery storage for peak demand management
+- Reduce peak charges by up to 40%
+- 24/7 monitoring and optimisation
+- Revenue generation through grid services (FFR, DSR)
+- Recent deployment: 50MWh system for manufacturing client`,
+            solar: `Key focus: Solar PV and renewable generation
+- Rooftop and ground-mount solar installations
+- Power Purchase Agreements (PPAs) for price certainty
+- On-site generation reducing grid dependency
+- Battery integration for 24/7 renewable supply
+- Typical ROI: 4-6 years with guaranteed performance`,
+            efficiency: `Key focus: Energy efficiency and monitoring
+- Smart metering and real-time energy monitoring
+- Energy Performance Contracts (EnPC) with guaranteed savings
+- ISO 50001 Energy Management support
+- Waste identification and elimination
+- Average 20-30% consumption reduction`,
+            heat: `Key focus: Heat networks and waste heat recovery
+- Industrial heat recovery and reuse systems
+- District heating network connections
+- Combined Heat and Power (CHP) solutions
+- Electrification of industrial heat processes
+- Carbon reduction through heat decarbonisation`,
+            ppa: `Key focus: Corporate Power Purchase Agreements
+- Long-term fixed price renewable electricity
+- Budget certainty for 10-15 years
+- Direct connection to UK renewable assets
+- Meet RE100 and SBTi commitments
+- Competitive rates vs standard supply contracts`
+        };
+
+        function applyEONTemplate(type) {
+            const current = document.getElementById('bespokeEON').value;
+            const template = eonTemplates[type];
+            document.getElementById('bespokeEON').value = current ? current + '\n\n' + template : template;
+        }
+
+        function clearBespoke() {
+            document.getElementById('bespokeEON').value = '';
+            document.getElementById('bespokeIntel').value = '';
+        }
+
         // Signature handling
         function toggleSignatureType() {
             const type = document.querySelector('input[name="sigType"]:checked').value;
@@ -328,7 +446,6 @@
             const dataLines = lines.slice(1);
             let added = 0;
 
-            // Detect column indices
             const getIndex = (keywords) => {
                 for (let keyword of keywords) {
                     const idx = headers.findIndex(h => h.includes(keyword));
@@ -525,7 +642,6 @@
                 setTimeout(() => {
                     const company = contact.company;
                     const providedWebsite = contact.website;
-                    // If no website provided, generate likely URL from company name
                     const website = providedWebsite || `https://www.${company.toLowerCase().replace(/[^a-z0-9]/g, '')}.com`;
                     
                     const researchData = {
@@ -539,7 +655,6 @@
                         eonRelevance: ''
                     };
 
-                    // Simulate comprehensive research
                     if (options.searchWebsite) {
                         researchData.sources.push({ name: 'Corporate Website', type: 'web' });
                         researchData.sustainabilityStrategy = generateEONStrategy(company);
@@ -638,8 +753,12 @@
             section.classList.remove('hidden');
             const signature = getSignature();
             
+            // Get bespoke inputs
+            const bespokeEON = document.getElementById('bespokeEON').value.trim();
+            const bespokeIntel = document.getElementById('bespokeIntel').value.trim();
+            
             section.innerHTML = contacts.map(contact => {
-                const email = generateEONEmail(contact, signature);
+                const email = generateEONEmail(contact, signature, bespokeEON, bespokeIntel);
                 return `
                     <div class="glass-effect rounded-2xl shadow-xl overflow-hidden border border-white/50 slide-in font-arial">
                         <div class="bg-gradient-to-r from-red-600 to-orange-500 px-6 py-4">
@@ -672,6 +791,14 @@
                                 </div>
                             </div>
                             
+                            ${(bespokeEON || bespokeIntel) ? `
+                                <div class="mb-4 bg-purple-50 rounded-lg p-3 border border-purple-100">
+                                    <div class="text-xs font-semibold text-purple-800 mb-2 font-arial">Bespoke Inputs Applied:</div>
+                                    ${bespokeEON ? `<div class="text-xs text-purple-700 mb-1 font-arial">✓ Custom E.ON messaging included</div>` : ''}
+                                    ${bespokeIntel ? `<div class="text-xs text-purple-700 font-arial">✓ Recipient intelligence integrated</div>` : ''}
+                                </div>
+                            ` : ''}
+                            
                             ${contact.researchData ? `
                                 <div class="mb-4 bg-orange-50 rounded-lg p-3 border border-orange-100">
                                     <div class="text-xs font-semibold text-orange-800 mb-1 font-arial">AI Research Insights Used:</div>
@@ -695,44 +822,37 @@ ${email.bodyHtml}
             document.getElementById('researchBtn').textContent = 'Research Complete - Emails Generated';
         }
 
-        function generateEONEmail(contact, signature) {
+        function generateEONEmail(contact, signature, bespokeEON, bespokeIntel) {
             const firstName = contact.name.split(' ')[0];
             const company = contact.company;
             const research = contact.researchData;
             
             let subject, body, hook, eonValueProp;
 
-            // E.ON value propositions based on website research
-            const eonServices = {
-                'battery-storage': {
-                    headline: `Optimising ${company}'s energy resilience with battery storage solutions`,
-                    angle: `E.ON is currently building battery storage at scale across the UK, offering smart alternatives to traditional grid dependency. For ${company}, this could mean reducing peak demand charges by up to 40% while securing energy resilience for critical operations.`
-                },
-                'renewable-generation': {
-                    headline: `Accelerating ${company}'s renewable transition with integrated solutions`,
-                    angle: `E.ON's experience in designing and building renewable generation at scale positions us uniquely to support ${company}'s clean electricity goals. We offer end-to-end solutions from on-site solar PV to corporate Power Purchase Agreements (PPAs) that guarantee price certainty and carbon reduction.`
-                },
-                'heat-networks': {
-                    headline: `Maximising ${company}'s energy efficiency through waste heat recovery`,
-                    angle: `As specialists in multi-utility services, E.ON helps organisations like ${company} turn waste heat into power through innovative heat network solutions. Manufacturers across the UK are choosing E.ON to recover valuable energy from industrial processes—improving both sustainability metrics and bottom-line performance.`
-                },
-                'energy-efficiency': {
-                    headline: `Reducing ${company}'s wasted energy through smart monitoring and optimisation`,
-                    angle: `E.ON's smart business monitoring solutions help organisations eliminate wasted energy with real-time visibility and control. Combined with our Energy Performance Contracting (EnPC) model, we can guarantee energy savings that self-fund infrastructure improvements—removing the capex barrier to efficiency gains.`
-                },
-                'general': {
-                    headline: `Supporting ${company}'s sustainability goals with integrated energy solutions`,
-                    angle: `E.ON Energy helps businesses like ${company} reduce wasted energy and live more sustainably through comprehensive multi-utility solutions. From smart monitoring and efficiency improvements to renewable generation and battery storage, we design and build sustainable energy infrastructure at scale.`
-                }
-            };
+            // Determine E.ON value proposition
+            if (bespokeEON) {
+                // Use user-provided bespoke E.ON messaging
+                eonValueProp = bespokeEON;
+            } else {
+                // Fall back to AI-selected based on research
+                const eonServices = {
+                    'battery-storage': `E.ON is currently building battery storage at scale across the UK, offering smart alternatives to traditional grid dependency. For ${company}, this could mean reducing peak demand charges by up to 40% while securing energy resilience for critical operations.`,
+                    'renewable-generation': `E.ON's experience in designing and building renewable generation at scale positions us uniquely to support ${company}'s clean electricity goals. We offer end-to-end solutions from on-site solar PV to corporate Power Purchase Agreements (PPAs) that guarantee price certainty and carbon reduction.`,
+                    'heat-networks': `As specialists in multi-utility services, E.ON helps organisations like ${company} turn waste heat into power through innovative heat network solutions. Manufacturers across the UK are choosing E.ON to recover valuable energy from industrial processes—improving both sustainability metrics and bottom-line performance.`,
+                    'energy-efficiency': `E.ON's smart business monitoring solutions help organisations eliminate wasted energy with real-time visibility and control. Combined with our Energy Performance Contracting (EnPC) model, we can guarantee energy savings that self-fund infrastructure improvements—removing the capex barrier to efficiency gains.`,
+                    'general': `E.ON Energy helps businesses like ${company} reduce wasted energy and live more sustainably through comprehensive multi-utility solutions. From smart monitoring and efficiency improvements to renewable generation and battery storage, we design and build sustainable energy infrastructure at scale.`
+                };
+                
+                const relevance = research ? research.eonRelevance : 'general';
+                eonValueProp = eonServices[relevance];
+            }
 
-            if (research) {
-                const relevance = research.eonRelevance || 'general';
-                const service = eonServices[relevance];
-                
-                subject = service.headline;
-                
-                // Contextual opening based on research
+            // Determine opening hook
+            if (bespokeIntel) {
+                // Use user-provided intelligence
+                hook = bespokeIntel;
+            } else if (research) {
+                // Fall back to AI-researched hook
                 if (research.recentNews.length > 0) {
                     hook = `I noted with interest ${company}'s ${research.recentNews[0].toLowerCase()}. This demonstrates the kind of forward-thinking approach that distinguishes true energy leaders.`;
                 } else if (research.energyInitiatives.length > 0) {
@@ -740,11 +860,30 @@ ${email.bodyHtml}
                 } else {
                     hook = `I am writing to you regarding ${company}'s commitment to ${research.sustainabilityStrategy.toLowerCase()}. As the UK's leading energy solutions provider, E.ON is uniquely positioned to support your organisation in turning these ambitious goals into operational reality.`;
                 }
+            } else {
+                // Generic fallback
+                hook = `I am writing from E.ON Energy regarding potential opportunities to support ${company} with integrated energy solutions.`;
+            }
 
-                eonValueProp = service.angle;
+            // Determine subject line
+            if (bespokeIntel && bespokeIntel.toLowerCase().includes('met')) {
+                subject = `Following up from our meeting - ${company}'s energy strategy`;
+            } else if (research && bespokeEON) {
+                subject = `Supporting ${company}'s energy objectives with E.ON solutions`;
+            } else if (research) {
+                const relevance = research.eonRelevance;
+                if (relevance === 'battery-storage') subject = `Optimising ${company}'s energy resilience with battery storage solutions`;
+                else if (relevance === 'renewable-generation') subject = `Accelerating ${company}'s renewable transition with integrated solutions`;
+                else if (relevance === 'heat-networks') subject = `Maximising ${company}'s energy efficiency through waste heat recovery`;
+                else if (relevance === 'energy-efficiency') subject = `Reducing ${company}'s wasted energy through smart monitoring and optimisation`;
+                else subject = `Supporting ${company}'s sustainability goals with integrated energy solutions`;
+            } else {
+                subject = `Exploring energy partnership opportunities with ${company}`;
+            }
 
-                // Role-specific value addition
-                let roleSpecific = '';
+            // Role-specific additions
+            let roleSpecific = '';
+            if (research) {
                 if (research.industryContext.includes('Facilities')) {
                     roleSpecific = `\n\nFor facilities teams specifically, our integrated approach means single-accountability for electricity, heat, and efficiency measures—reducing the complexity of managing multiple contractors and ensuring optimised system performance.`;
                 } else if (research.industryContext.includes('Sustainability')) {
@@ -754,8 +893,10 @@ ${email.bodyHtml}
                 } else if (research.industryContext.includes('Finance')) {
                     roleSpecific = `\n\nWith energy prices remaining volatile, our fixed-price contracts and guaranteed savings models provide budget certainty whilst delivering genuine cost reductions—typically 15-25% on baseline consumption.`;
                 }
+            }
 
-                body = `Dear ${firstName},
+            // Build email body
+            body = `Dear ${firstName},
 
 ${hook}
 
@@ -772,22 +913,6 @@ Given your role as ${contact.role}, I would welcome the opportunity to discuss $
 Would you be available for a brief introductory call next week to explore whether an E.ON partnership could support ${company}'s energy and sustainability objectives?
 
 ${signature ? '' : 'Yours sincerely,\n\n[Your Name]\nBusiness Energy Consultant\nE.ON Energy Solutions\nDirect: [Phone Number]\nEmail: [Email Address]\n\nE.ON Energy | Designing and building for sustainability at scale\nwww.eonenergy.com'}`;
-
-            } else {
-                // Fallback without research
-                subject = `Exploring energy partnership opportunities with ${company}`;
-                body = `Dear ${firstName},
-
-I am writing from E.ON Energy regarding potential opportunities to support ${company} with integrated energy solutions.
-
-As the UK's leading energy infrastructure provider, E.ON helps organisations reduce wasted energy and live more sustainably through multi-utility services including smart monitoring, efficiency improvements, renewable generation, and battery storage.
-
-Given your role as ${contact.role}, I would welcome the opportunity to discuss how we might help ${company} achieve its energy and sustainability goals.
-
-Would you be available for a brief call next week?
-
-${signature ? '' : 'Yours sincerely,\n\n[Your Name]\nE.ON Energy Solutions\nwww.eonenergy.com'}`;
-            }
 
             // Add signature if provided
             let bodyHtml = body;
@@ -821,7 +946,6 @@ ${signature ? '' : 'Yours sincerely,\n\n[Your Name]\nE.ON Energy Solutions\nwww.
             const element = document.getElementById(`email-${contactId}`);
             const subject = element.closest('.glass-effect').querySelector('.text-red-700').innerText;
             
-            // Create temporary textarea to copy formatted text
             const textarea = document.createElement('textarea');
             textarea.value = `Subject: ${subject}\n\n${element.innerText}`;
             document.body.appendChild(textarea);
